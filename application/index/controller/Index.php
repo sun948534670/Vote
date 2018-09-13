@@ -6,6 +6,7 @@ class Index
 {
     public function index()
     {
-        Wechat::user_tag()->lists();
+        $response = Wechat::server()->serve();
+        $response->send();
     }
 }
